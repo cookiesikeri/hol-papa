@@ -76,7 +76,7 @@ class HomeController extends Controller
             \Log::error('Failed to fetch data from the second API endpoint.');
         }
 
-            return view('welcome', compact('data1', 'events', 'galleries', 'data2', 'bios', 'data3'));
+            return view('welcome', compact('data1', 'galleries', 'data2', 'bios', 'data3'));
 
 
     }
