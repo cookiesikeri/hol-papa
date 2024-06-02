@@ -9,7 +9,7 @@
         <div class="event-item">
           <div class="event-img">
             <div class="overlay-bg"></div>
-            <a href="#"><img src="{{URL::to($state['image'])}}" class="img-responsive" alt="event-img-1"></a>
+            <a href="{{ $state['slug'] ?? '#' }}"><img src="{{URL::to($state['image'])}}" class="img-responsive" alt="event-img-1"></a>
           </div>
           <div class="event-content">
             <a href="{{ $state['slug'] ?? '#' }}"><h4 class="event-heading">{{ucfirst($state['name'] ?? 'No name')}}</h4></a>
