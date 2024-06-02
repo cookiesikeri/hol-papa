@@ -90,6 +90,7 @@ Home
       <div class="overlay-bg"></div>
       <div class="form-section">
         <h4 class="form-heading">PEACE AND BLESSINGS BE UNTO YOU IN THE NAME OF JESUS. </h4>
+        <h5 class="form-subheading">For appointments/suggestions/enquiries/or to report a case to Rev Yinka Yusuf (General Overseer of Household of Love Church) kindly reach out to the contacts below;</h5>
         <div class="pastor-form-block">
           <div class="pastor-contact">
             <span><i class="fa fa-phone"></i></span>
@@ -100,7 +101,6 @@ Home
             <p><a href="mailto:{{$site->site_email}}" target="_top">{{$site->site_email}}</a></p>
           </div>
         </div>
-        <p class="form-subheading">For appointments/suggestions/enquiries/or to report a case to PasRev Yinka Yusuf (General Overseer of Household of Love Church) kindly reach out to the contacts below;</p>
       </div>
       <div class="container">
         <div class="row">
