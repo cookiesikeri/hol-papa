@@ -16,3 +16,8 @@ use App\Http\Controllers\PaymentController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::post('/contact-us-post', [HomeController::class, 'postMessage'])->name('site.contact.post');
+Route::post('/newsletter', [HomeController::class, 'postNewsLetter'])->name('site.newsletter.post');
+Route::post('/submit-prayer-request', [HomeController::class, 'posPrayer'])->name('prayer.post');
+Route::post('/submit-testimony', [HomeController::class, 'posTestimony'])->name('testimony.post');

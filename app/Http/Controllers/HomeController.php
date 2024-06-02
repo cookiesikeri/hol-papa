@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
 {
@@ -33,49 +34,46 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $quotes = Quote::orderBy('created_at', 'desc')->get();
-        $events = Event::where('status', 1)->orderBy('created_at', 'desc')->get();
-        $serms = Sermon::take(2)->latest()->get();
 
-        return view('welcome', compact('quotes', 'events', 'serms'));
+        $serms = 'https://householdoflove.org/api/v1/quotes';
+
+        $response = Http::withHeaders([
+            'accept' => 'application/json',
+            'content-type' => 'application/json',
+        ])->get($serms);
+
+      $response = $response->getBody()->getContents();
+
+      $quotes = 'https://householdoflove.org/api/v1/quotes';
+
+      $response = Http::withHeaders([
+          'accept' => 'application/json',
+          'content-type' => 'application/json',
+      ])->get($quotes);
+
+    $response = $response->getBody()->getContents();
+
+        return view('welcome', compact('quotes', 'serms'));
     }
-    public function Sermons()
+
+    public function GetDeviceStatus (Request $request)
     {
-        $mainserms = Sermon::orderBy('created_at', 'desc')->get();
-        $trendingPosts = Sermon::trending()->get();
-        return view('pages.Sermons', compact('mainserms', 'trendingPosts'));
+        $base_url = 'https://mobileapi-staging.wesley.ng/deviceStatus';
+
+            $response = Http::withHeaders([
+                'MODE' => ''. env('MODE'),
+                'IAM' => $request->IAM,
+                'accept' => 'application/json',
+                'content-type' => 'application/json',
+            ])->get($base_url);
+
+        $response = $response->getBody()->getContents();
+
+        Session::flash('success', 'Device Status Fetched successfully.');
+
+        return view('admin.onboarding.device_result')->with(['response' => $response]);
     }
 
-
-    public function ProjectDetails($slug)
-    {
-
-        $eventdetails = Project::where('slug', $slug)->first();
-        $events = Project::where('status', 0)->take(3)->inRandomOrder()->get();
-
-        return view('pages.project_details' , compact('eventdetails', 'events'));
-    }
-
-    public function Downloads()
-    {
-        $downloads = Download::where('status', 0)->orderBy('created_at', 'desc')->get();
-
-        return view('pages.downloads', compact('downloads'));
-    }
-    public function AboutUs()
-    {
-        $downloads = Gallery::inRandomOrder()->get();
-        $quotes = Quote::orderBy('created_at', 'desc')->get();
-        $serms = Sermon::take(2)->latest()->get();
-
-        return view('pages.about', compact('downloads', 'quotes', 'serms'));
-    }
-
-    public function Live()
-    {
-
-        return view('pages.Live');
-    }
 
     public function Give()
     {
@@ -83,34 +81,6 @@ class HomeController extends Controller
         return view('pages.give');
     }
 
-    public function FAQ()
-    {
-        $faqs = FAQ::orderBy('id', 'desc')->get();
-        $faqcount = FAQ::count();
-
-        return view('pages.FAQ' , compact('faqs', 'faqcount'));
-    }
-
-
-
-    public function ContactUs()
-    {
-
-        return view('pages.contact');
-    }
-
-    public function Testimonies()
-    {
-        $volunteers = Testimony::where('publish','yes')->latest()->get();
-
-        return view('pages.testimonies', compact('volunteers'));
-    }
-
-    public function PrayerReq()
-    {
-
-        return view('pages.PrayerReq');
-    }
 
     public function postMessage(Request $request) {
         $data = array(
@@ -149,7 +119,6 @@ class HomeController extends Controller
         // Mail::to('support@aspenafrica.org')->send(new \App\Mail\ContactMessage($message));
         return redirect()->back();
     }
-
 
 
     public function postNewsLetter(Request $request) {
