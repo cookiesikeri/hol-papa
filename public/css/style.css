@@ -55,7 +55,7 @@
 
 /* =============== Colors Used=====================
 
-  Gold : #e671da;
+  Gold : #1f1cc9;
   Grey:  #606060;
   Black: #000000;
 
@@ -129,7 +129,7 @@ h6 {
 }
 
 a {
-    color: #992bde;
+    color: #1f1cc9;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -270,7 +270,7 @@ ul {
     width: 142px;
     height: 34px;
     line-height: 2!important;
-    background: #b14295;
+    background: #2b22a5;
     text-transform: uppercase;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s ease;
@@ -367,7 +367,7 @@ ul {
 
 .owl-prev:hover,
 .owl-next:hover {
-    background-color: #e671da;
+    background-color: #1f1cc9;
     color: #FFF;
 }
 
@@ -418,8 +418,8 @@ ul {
 }
 
 .owl-dot.active {
-    border: 1px solid #e671da;
-    background: #e671da;
+    border: 1px solid #1f1cc9;
+    background: #1f1cc9;
 }
 
 @media(max-width:767px) {
@@ -453,7 +453,7 @@ ul {
 
 .read-more i {
     margin-left: 6px;
-    color: #e671da;
+    color: #1f1cc9;
     -webkit-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -492,7 +492,7 @@ ul {
 }
 
 .social-icon li:hover a {
-    color: #e671da;
+    color: #1f1cc9;
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -501,7 +501,7 @@ ul {
 }
 
 .social-icon ul li:hover {
-    border: 2px solid #e671da;
+    border: 2px solid #1f1cc9;
 }
 
 .social-two ul li {
@@ -640,20 +640,20 @@ ul {
         background-color: rgba(0, 0, 0, 1);
     }
     #cssmenu.small-screen .submenu-button.submenu-opened {
-        background: #e671da;
+        background: #1f1cc9;
     }
     #cssmenu.small-screen #menu-button:before {
-        background: #e671da;
+        background: #1f1cc9;
     }
     #cssmenu.small-screen #menu-button:after {
-        border-top: 2px solid #e671da;
-        border-bottom: 2px solid #e671da;
+        border-top: 2px solid #1f1cc9;
+        border-bottom: 2px solid #1f1cc9;
     }
     #cssmenu.small-screen #menu-button.menu-opened:before {
-        background: #e671da;
+        background: #1f1cc9;
     }
     #cssmenu.small-screen #menu-button.menu-opened:after {
-        background: #e671da;
+        background: #1f1cc9;
     }
 }
 
@@ -733,7 +733,7 @@ ul {
 }
 
 .search-close:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .search input:focus {
@@ -947,7 +947,7 @@ ul {
 }
 
 .abt-tab-item:hover {
-    background-color: #e671da;
+    background-color: #1f1cc9;
     -webkit-box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.6);
     box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.6);
@@ -1023,7 +1023,7 @@ ul {
 }
 
 .who-heading:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .img-spacing {
@@ -1043,7 +1043,7 @@ ul {
     font-weight: 500;
     padding-top: 65px;
     text-align: center;
-    background-color: #e671da;
+    background-color: #1f1cc9;
     border: solid 10px #FCFCFC;
     position: absolute;
     top: 60%;
@@ -1105,7 +1105,7 @@ ul {
 }
 
 .sermons-icon li:hover a {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .sermons-heading {
@@ -1215,7 +1215,7 @@ ul {
 }
 
 .sermons-three .sermons-img-icon a:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .sermons-vThree .sermons-desc {
@@ -1383,7 +1383,7 @@ ul {
 }
 
 .sermons-hOne .sermons-icon li:hover a {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .sermons-hOne .read-more:hover,
@@ -1476,7 +1476,7 @@ ul {
 }
 
 .news-heading:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .news-date {
@@ -1486,7 +1486,7 @@ ul {
 .news-date i,
 .news-by i {
     padding-right: 10px;
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .news-contentOne,
@@ -1663,7 +1663,7 @@ ul {
 }
 
 .event-heading:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .event-dtl {
@@ -1838,12 +1838,12 @@ ul {
 }
 
 .event-bg-content .btn-default:hover {
-    background-color: #e671da;
+    background-color: #1f1cc9;
     color: #FFF;
 }
 
 .event-bg-content .event-countdown .counter-col {
-    background-color: #e671da;
+    background-color: #1f1cc9;
 }
 
 
@@ -1875,7 +1875,7 @@ ul {
 }
 
 .upcoming-heading:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .upcoming-main-block .row-top-spacing {
@@ -2343,7 +2343,7 @@ ul {
 }
 
 .supporter-item:hover {
-    background: #e671da;
+    background: #1f1cc9;
 }
 
 
@@ -2378,7 +2378,7 @@ ul {
 }
 
 .client-post {
-    color: #e671da;
+    color: #1f1cc9;
     font-size: 14.8px;
     line-height: 1.56;
     padding-bottom: 11px;
@@ -2477,7 +2477,7 @@ ul {
 }
 
 .priest-two .priest-name:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .priest-two .priest-img {
@@ -2562,7 +2562,7 @@ ul {
 
 .subscribe-btn:hover,
 .subscribe-btn:focus {
-    color: #e671da;
+    color: #1f1cc9;
     background-color: #FFF;
 }
 
@@ -2872,7 +2872,7 @@ ul {
 }
 
 .portfolio-item .btn-video-play:hover {
-    background: #e671da;
+    background: #1f1cc9;
 }
 
 
@@ -2904,7 +2904,7 @@ ul {
 }
 
 .sermons-img-block .btn-video-play:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 
@@ -3013,11 +3013,11 @@ ul {
 }
 
 .banner-main-block .breadcrumb>.active a {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .banner-main-block .breadcrumb li a:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .banner-main-block .overlay-bg {
@@ -3124,7 +3124,7 @@ ul {
 .error-block .search-btn:active,
 .error-block .search-btn:focus,
 .error-block .search-btn:active:focus {
-    color: #e671da;
+    color: #1f1cc9;
     background-color: #F2F2F2;
     outline: none;
 }
@@ -3132,7 +3132,7 @@ ul {
 .search-form .input-group:hover,
 .search-form .input-group:active,
 .search-form .input-group:focus {
-    border-color: #e671da;
+    border-color: #1f1cc9;
 }
 
 .error-subheading {
@@ -3310,7 +3310,7 @@ ul {
 
 .blog-comment .media-heading:hover,
 .blog-comment .media-heading:hover span {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .media-reply a {
@@ -3321,7 +3321,7 @@ ul {
 }
 
 .media-reply a:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .media-body p {
@@ -3342,7 +3342,7 @@ ul {
 }
 
 .media-body:hover {
-    border: solid 2px #e671da;
+    border: solid 2px #1f1cc9;
 }
 
 .comment-main-block .media-left a img {
@@ -3381,7 +3381,7 @@ ul {
 }
 
 .ministry-heading:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .ministry-main-block .row-top-spacing {
@@ -3447,7 +3447,7 @@ ul {
 }
 
 .ministry-quote:hover .quotes-icon {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .ministry-dtl-btn {
@@ -3583,12 +3583,12 @@ ul {
 }
 
 .pastor-content .quotes-icon {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .pastor-main-block .pastor-id p {
     text-transform: uppercase;
-    color: #e671da;
+    color: #1f1cc9;
     text-align: center;
     padding-top: 20px;
 }
@@ -3693,7 +3693,7 @@ ul {
 }
 
 .pastor-gallery-block .pastor-id:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .pastor-gallery-block:hover .pastor-post {
@@ -3829,7 +3829,7 @@ ul {
 }
 
 .pastor-quote-block:hover .quotes-icon {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 @media(max-width:767px) {
@@ -3900,7 +3900,7 @@ ul {
 }
 
 .pastor-faq .panel-default:hover>.panel-heading {
-    border: 1px solid #e671da;
+    border: 1px solid #1f1cc9;
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -3910,7 +3910,7 @@ ul {
 
 .pastor-faq .panel-default:hover .faq-heading,
 .pastor-faq .panel-default:hover .faq-btn {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .pastor-faq .panel-group .panel+.panel {
@@ -3933,7 +3933,7 @@ ul {
 
 .faq-heading .btn-default:hover,
 .faq-heading .btn-default:focus {
-    color: #e671da;
+    color: #1f1cc9;
     background-color: transparent;
     border: none;
     outline: none;
@@ -3989,7 +3989,7 @@ ul {
 }
 
 .speaker-main-block .speaker-id:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .speaker-main-block .speaker-content {
@@ -4053,7 +4053,7 @@ ul {
 }
 
 .footer-heading {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .footer-logo {
@@ -4096,7 +4096,7 @@ ul {
 }
 
 .footer-post-date {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .contact-no a,
@@ -4111,7 +4111,7 @@ ul {
 
 .contact-no a:hover,
 .mail-to a:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 
@@ -4201,7 +4201,7 @@ ul {
 
 .footer-cause-block .panel-title a:hover,
 .footer-cause-block .panel-title a:focus {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .footer-cause-block .panel-heading,
@@ -4318,7 +4318,7 @@ ul {
 .contact-form .form-control:focus,
 .contact-form .form-textarea:active,
 .contact-form .form-textarea:focus {
-    border-color: #e671da;
+    border-color: #1f1cc9;
     background: #FFF;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(228, 184, 85, .6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(228, 184, 85, .6);
@@ -4360,7 +4360,7 @@ ul {
 /*===== Contact Two =====*/
 
 .contact-two .contact-block {
-    background-color: #e671da;
+    background-color: #1f1cc9;
     text-align: center;
     padding: 51px 69px 40px;
 }
@@ -4557,7 +4557,7 @@ ul {
     display: inline-flex;
     margin-top: 46px;
     font-size: 25px;
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .pastor-form-block .pastor-contact p {
@@ -4577,7 +4577,7 @@ ul {
 }
 
 .pastor-form-block a:hover {
-    color: #e671da;
+    color: #1f1cc9;
 }
 
 .pastor-form .form-section .form-subheading {
@@ -4646,7 +4646,7 @@ ul {
 }
 
 .price-filter .ui-slider-handle.ui-state-default.ui-corner-all {
-    background: #e671da none repeat scroll 0 0;
+    background: #1f1cc9 none repeat scroll 0 0;
     border: medium none;
     border-radius: 50%;
     height: 27px;
@@ -4657,7 +4657,7 @@ ul {
 }
 
 .ui-slider-range.ui-widget-header.ui-corner-all {
-    background: #e671da none repeat scroll 0 0;
+    background: #1f1cc9 none repeat scroll 0 0;
     height: 14px;
     position: absolute;
 }
