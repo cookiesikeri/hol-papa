@@ -90,31 +90,7 @@ class HomeController extends Controller
 
         return view('pages.FAQ' , compact('faqs', 'faqcount'));
     }
-    public function whatwedoDetails($slug)
-    {
 
-        $eventdetails = WhatWeDo::where('slug', $slug)->first();
-        $events = WhatWeDo::take(4)->inRandomOrder()->get();
-        $depts = Department::orderBy('name')->get();
-
-        return view('pages.whatwedo_details' , compact('eventdetails', 'events', 'depts'));
-    }
-
-    public function eventDetails($slug)
-    {
-
-        $eventdetails = Event::where('slug', $slug)->first();
-        $events = Event::where('status', 1)->take(2)->get();
-
-
-        return view('pages.event_details' , compact('eventdetails', 'events'));
-    }
-    public function Departments()
-    {
-        $depts = Department::orderBy('name')->get();
-
-        return view('pages.departments', compact('depts'));
-    }
 
 
     public function ContactUs()
@@ -122,12 +98,7 @@ class HomeController extends Controller
 
         return view('pages.contact');
     }
-    public function Events()
-    {
-        $events = Event::orderBy('created_at', 'desc')->paginate(12);
 
-        return view('pages.events', compact('events'));
-    }
     public function Testimonies()
     {
         $volunteers = Testimony::where('publish','yes')->latest()->get();
