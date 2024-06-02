@@ -4,7 +4,7 @@
       {{-- <h5 class="sub-heading">below are some of our events</h5> --}}
     </div>
     <div id="event-slider" class="event-slider">
-        @forelse($events as $state)
+        @forelse($data3 as $state)
       <div class="item event-block">
         <div class="event-item">
           <div class="event-img">
@@ -12,10 +12,10 @@
             <a href="#"><img src="{{URL::to($state['image'])}}" class="img-responsive" alt="event-img-1"></a>
           </div>
           <div class="event-content">
-            <a href="#"><h4 class="event-heading">{{ucfirst($state['name'])}}</h4></a>
+            <a href="{{ $state['slug'] ?? '#' }}"><h4 class="event-heading">{{ucfirst($state['name'] ?? 'No name')}}</h4></a>
             <p class="sermons-date">{{ date('M j, Y', strtotime($state['date'])) }} | {{ date('h:ia', strtotime($state['time'])) }}</p>
 
-            <a class="read-more" href="#">More Details<i class="fa fa-long-arrow-right"></i></a>
+            <a class="read-more" href="{{ $state['slug'] ?? '#' }}">More Details<i class="fa fa-long-arrow-right"></i></a>
           </div>
         </div>
       </div>

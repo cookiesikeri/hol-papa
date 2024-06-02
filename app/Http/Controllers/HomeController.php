@@ -37,7 +37,7 @@ class HomeController extends Controller
     {
 
             $galleries = Gallery::inRandomOrder()->get();
-            $events = Event::orderBy('id', 'desc')->get();
+            // $events = Event::orderBy('id', 'desc')->get();
             $bios = Bio::orderBy('id', 'desc')->get();
 
                     // Fetch data from the first API endpoint
@@ -46,8 +46,11 @@ class HomeController extends Controller
         // Fetch data from the second API endpoint
         $response2 = Http::get('https://householdoflove.org/api/v1/sermons');
 
+        $response3 = Http::get('https://householdoflove.org/api/v1/events');
+
         $data1 = [];
         $data2 = [];
+        $data3 = [];
 
         // Check if the first request was successful
         if ($response1->successful()) {
@@ -65,7 +68,15 @@ class HomeController extends Controller
             \Log::error('Failed to fetch data from the second API endpoint.');
         }
 
-            return view('welcome', compact('data1', 'events', 'galleries', 'data2', 'bios'));
+        // Check if the second request was successful
+        if ($response3->successful()) {
+            $data3 = $response3->json();
+        } else {
+            // Log the error or handle it as needed
+            \Log::error('Failed to fetch data from the second API endpoint.');
+        }
+
+            return view('welcome', compact('data1', 'events', 'galleries', 'data2', 'bios', 'data3'));
 
 
     }
