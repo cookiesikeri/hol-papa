@@ -136,7 +136,7 @@
 #cssmenu ul ul li:hover>a,
 #cssmenu ul ul li a:hover {
     color: #FFF;
-    background-color: #c26ee6;
+    background-color: #434acd;
 }
 
 #cssmenu.small-screen {
@@ -204,7 +204,7 @@
 #cssmenu.small-screen #menu-button {
     display: block;
     padding: 17px;
-    color: #b95ad6;
+    color: #2346c6;
     cursor: pointer;
     font-size: 12px;
     text-transform: uppercase;
