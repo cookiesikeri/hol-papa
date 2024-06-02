@@ -10,32 +10,32 @@
           <div class="navigation-menu">
             <div id="cssmenu">
               <ul>
-                <li @if(active('/')) class="active" @endif><a href="{{url('/')}}">Home</a></li>
-                <li><a href="#">About Us</a>
-                  <ul>
-                    <li><a href="{{route('aboutus')}}">About Our Church</a></li>
-                    <li><a href="">About Our Pastor</a></li>
-                  </ul>
-                </li>
+                <li><a href="{{url('/')}}">Home</a></li>
+                <li><a href="#">About</a>
+                    <ul>
+                        <li><a href="https://householdoflove.org" target="_blank">About My Church</a></li>
+
+                        <li><a href="https://householdoflove.org/give" target="_blank">Assist the Work of God</a></li>
+                     </ul>
+                   </li>
+
                 <li><a href="#">Media Center</a>
                  <ul>
-                    <li><a href="{{ route('live') }}" target="_blank">Live Stream</a></li>
-                    <li><a href="{{ route('downloads') }}">Downloads</a></li>
-                    <li><a href="{{ route('sermons') }}">Sermons</a></li>
+                    <li><a href="{{ route('gallery') }}">Gallery </a>
+                    <li><a href="https://householdoflove.org/live" target="_blank">Live Stream</a></li>
+                    <li><a href="https://householdoflove.org/downloads" target="_blank">Downloads</a></li>
+                    <li><a href="https://householdoflove.org/sermons" target="_blank">Sermons</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Quick links </a>
                     <ul>
-                       <li><a href="{{route('prayerreq')}}">Prayer Requests</a></li>
-                       <li><a href="{{route('faqs')}}">FAQs</a></li>
-                       <li><a href="{{route('testimonies')}}">Testimonies</a></li>
-                       <li><a href="{{route('departments')}}">Departments</a></li>
-                       <li><a href="{{route('events')}}">Events</a></li>
-                       <li><a href="{{route('projects.church')}}">Projects</a></li>
+                       <li><a href="https://householdoflove.org/prayer-requests" target="_blank">Prayer Requests</a></li>
+                       <li><a href="https://householdoflove.org/testimonies" target="_blank">Testimonies</a></li>
+                       <li><a href="https://householdoflove.org/events" target="_blank">Events</a></li>
+                       <li><a href="https://householdoflove.org/give">Give</a></li>
                      </ul>
                    </li>
-                <li><a href="{{route('contact')}}">Contact Us</a></li>
-                <li class="donate-btn"><a href="{{ route('give') }}" class="btn btn-default">Give Online</a></li>
+                <li class="donate-btn"><a href="{{route('contact')}}" class="btn btn-default"> Contact Me</a></li>
               </ul>
             </div>
           </div>

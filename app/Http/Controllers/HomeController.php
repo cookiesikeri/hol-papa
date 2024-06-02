@@ -11,6 +11,7 @@ use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\Quote;
 use App\Models\Sermon;
+use App\Models\Bio;
 use App\Models\Download;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -35,50 +36,46 @@ class HomeController extends Controller
     public function index()
     {
 
-        $serms = 'https://householdoflove.org/api/v1/quotes';
+            $galleries = Gallery::inRandomOrder()->get();
+            $events = Event::orderBy('id', 'desc')->get();
+            $bios = Bio::orderBy('id', 'desc')->get();
 
-        $response = Http::withHeaders([
-            'accept' => 'application/json',
-            'content-type' => 'application/json',
-        ])->get($serms);
+                    // Fetch data from the first API endpoint
+        $response1 = Http::get('https://householdoflove.org/api/v1/quotes');
 
-      $response = $response->getBody()->getContents();
+        // Fetch data from the second API endpoint
+        $response2 = Http::get('https://householdoflove.org/api/v1/sermons');
 
-      $quotes = 'https://householdoflove.org/api/v1/quotes';
+        $data1 = [];
+        $data2 = [];
 
-      $response = Http::withHeaders([
-          'accept' => 'application/json',
-          'content-type' => 'application/json',
-      ])->get($quotes);
+        // Check if the first request was successful
+        if ($response1->successful()) {
+            $data1 = $response1->json();
+        } else {
+            // Log the error or handle it as needed
+            \Log::error('Failed to fetch data from the first API endpoint.');
+        }
 
-    $response = $response->getBody()->getContents();
+        // Check if the second request was successful
+        if ($response2->successful()) {
+            $data2 = $response2->json();
+        } else {
+            // Log the error or handle it as needed
+            \Log::error('Failed to fetch data from the second API endpoint.');
+        }
 
-        return view('welcome', compact('quotes', 'serms'));
+            return view('welcome', compact('data1', 'events', 'galleries', 'data2', 'bios'));
+
+
     }
 
-    public function GetDeviceStatus (Request $request)
-    {
-        $base_url = 'https://mobileapi-staging.wesley.ng/deviceStatus';
-
-            $response = Http::withHeaders([
-                'MODE' => ''. env('MODE'),
-                'IAM' => $request->IAM,
-                'accept' => 'application/json',
-                'content-type' => 'application/json',
-            ])->get($base_url);
-
-        $response = $response->getBody()->getContents();
-
-        Session::flash('success', 'Device Status Fetched successfully.');
-
-        return view('admin.onboarding.device_result')->with(['response' => $response]);
-    }
-
-
-    public function Give()
+    public function Gallery()
     {
 
-        return view('pages.give');
+        $projects = Gallery::orderBy('created_at', 'desc')->paginate(20);
+
+        return view('gallery', compact('projects'));
     }
 
 
@@ -180,61 +177,5 @@ public function posPrayer(Request $request) {
 
 }
 
-public function posTestimony(Request $request) {
-    $data = array(
-        'name'      =>  $request->name,
-        'message'   =>  $request->message,
-        'identity'     =>  $request->identity,
-    );
-
-    $validator = Validator::make($data, [
-        'name'      =>  'required|string|max:50',
-        'message'   =>  'required',
-        'identity'   =>  'required',
-    ], [
-        'name.required'     =>  'Name field is required. Please fill in your name.',
-        'message.required'  =>  'Your forgot to type a message. Kindly write your message to proceed'
-    ]);
-
-    if($validator->fails()) {
-        return redirect()->back()->withErrors($validator)->withInput();
-    }
-
-    $message = Testimony::create($data);
-    Session::flash('success', 'Your Testimony has been sent and will be reviewed carefully before posting on our website.');
-    // Mail::to('support@aspenafrica.org')->send(new \App\Mail\ContactMessage($message));
-    return redirect()->back();
-}
-
-public function WorkForceRequest(Request $request) {
-    $data = array(
-        'name'      =>  $request->name,
-        'body'   =>  $request->body,
-        'email'     =>  $request->email,
-        'phone'     =>  $request->phone,
-        'city'   =>  $request->city,
-        'state'   =>  $request->state,
-        'department'   =>  $request->department,
-    );
-
-    $validator = Validator::make($data, [
-        'name'      =>  'required|string|max:50',
-        'email' => 'string', 'email', 'max:50', 'unique:work_force_requests',
-        'body'   =>  'required',
-        'phone'   =>  'required', 'max:15',
-    ], [
-        'name.required'     =>  'Name field is required. Please fill in your name.',
-        'body.required'  =>  'Your forgot to type your reason. Kindly write your reason to proceed'
-    ]);
-
-    if($validator->fails()) {
-        return redirect()->back()->withErrors($validator)->withInput();
-    }
-
-    $message = WorkForceRequest::create($data);
-    Session::flash('success', ' Request was sent successfully, We will contact you as soon as possible if need be.');
-    // Mail::to('support@aspenafrica.org')->send(new \App\Mail\ContactMessage($message));
-    return redirect()->back();
-}
 
 }
