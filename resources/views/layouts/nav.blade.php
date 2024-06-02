@@ -35,7 +35,7 @@
                        <li><a href="https://householdoflove.org/give">Give</a></li>
                      </ul>
                    </li>
-                <li class="donate-btn"><a href="{{route('contact')}}" class="btn btn-default"> Contact Me</a></li>
+                <li class="donate-btn"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#donationModal"> Prayer</a></li>
               </ul>
             </div>
           </div>

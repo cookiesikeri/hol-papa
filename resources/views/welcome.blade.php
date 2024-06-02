@@ -90,7 +90,7 @@ Home
       <div class="overlay-bg"></div>
       <div class="form-section">
         <h4 class="form-heading">PEACE AND BLESSINGS BE UNTO YOU IN THE NAME OF JESUS. </h4>
-        <h5 class="form-subheading">For appointments/suggestions/enquiries/or to report a case to Rev Yinka Yusuf (General Overseer of Household of Love Church) kindly reach out to the contacts below;</h5>
+        <h3 class="form-subheading">For appointments/suggestions/enquiries/or to report a case to Rev Yinka Yusuf (General Overseer of Household of Love Church) kindly reach out to the contacts below;</h3>
         <div class="pastor-form-block">
           <div class="pastor-contact">
             <span><i class="fa fa-phone"></i></span>
@@ -223,6 +223,32 @@ Home
     </div>
 </section>
 
+<div class="donation-modal-block">
+    <div id="donationModal" class="modal fade donation-modal" tabindex="-1" role="dialog" aria-labelledby="myModalHeading" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 id="myModalHeading" class="myModalHeading">Weekly Prayer</h4>
+            <h6 id="myModalSubHeading" class="myModalSubHeading">Beloved! are you interested in getting weekly prayer from me? </h6>
+          </div>
+          <div class="modal-body">
+            <form class="contact-form" method="post" action="{{route('site.newsletter.post')}}">
+                    {{csrf_field()}}
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="number" name="email" placeholder="Your Email Address" required>
+                </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" type="submit">Submit</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+</div>
 <br>
 
 @endsection
