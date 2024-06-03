@@ -1,6 +1,6 @@
 <section id="events" class="events-main-block">
     <div class="section text-center">
-      <h3 class="section-heading" style="text-decoration: underline; text-decoration-color: red; text-decoration-thickness: 2px;">Upcoming Events from my Church </h3>
+      <h3 class="section-heading" style="text-decoration: underline; text-decoration-color: rgb(0, 60, 255); text-decoration-thickness: 2px;">Upcoming Events From My Church </h3>
       {{-- <h5 class="sub-heading">below are some of our events</h5> --}}
     </div>
     <div id="event-slider" class="event-slider">

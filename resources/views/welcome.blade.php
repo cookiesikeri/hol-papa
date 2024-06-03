@@ -78,6 +78,28 @@ Home
       </div>
     </div>
   </section>
+
+  <section id="portfolio" class="portfolio-main-index-block">
+    <div class="container-fluid">
+      <div class="section text-center">
+        <h3 class="section-heading" style="text-decoration: underline; text-decoration-color: rgb(0, 60, 255); text-decoration-thickness: 2px;">My Gallery</h3>
+        <h5 class="sub-heading">Indeed God has been using Rev. Yinka Yusuf to do signs and wonders. May the blessing of God touch you wherever you are "AMEN".</h5>
+      </div>
+      <div class="row">
+        <div id="portfolio-block" class="portfolio-popup">
+            @foreach($galleries as $state)
+        <div class="col-lg-15 col-md-15 col-sm-3 col-xs-6 portfolio-item portfolio-btm-mrgn">
+            <div class="portfolio-img">
+                <img src="{{URL::to($state['image'])}}" class="img-responsive" alt="gallery-img-1">
+                <div class="portfolio-overlay"><a href="{{URL::to($state['image'])}}"><i class="fa fa-search"></i></a></div>
+            </div>
+        </div>
+         @endforeach
+        </div>
+      </div>
+      <a class="read-more col-md-12 load-more text-center">View All <i class="fa fa-long-arrow-right"></i></a>
+    </div>
+  </section>
 <!--  latest sermons -->
 @include('home.events')
 @include('home.sermons')

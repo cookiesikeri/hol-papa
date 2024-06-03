@@ -1,7 +1,7 @@
 <section id="sermons" class="sermons-horizontal-main-block sermons-hOne">
     <div class="container-fluid">
       <div class="section text-center">
-        <h3 class="section-heading" style="text-decoration: underline; text-decoration-color: red; text-decoration-thickness: 2px;">Two Most Recent Sermons</h3>
+        <h3 class="section-heading" style="text-decoration: underline; text-decoration-color: rgb(0, 60, 255); text-decoration-thickness: 2px;">Two Most Recent Sermons</h3>
         {{-- <h5 class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at euismod ex, Maeceans sit amet sollicitudin ex.</h5> --}}
       </div>
       <div class="row row-spacing">

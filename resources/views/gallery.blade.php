@@ -8,7 +8,7 @@ My Gallery
   <section id="portfolio" class="portfolio-main-block portfolio-three">
     <div class="container-fluid">
       <div class="section text-center">
-        <h3 class="section-heading">My Gallery</h3>
+        <h3 class="section-heading" style="text-decoration: underline; text-decoration-color: rgb(0, 60, 255); text-decoration-thickness: 2px;">My Gallery</h3>
 
       </div>
     </div>
