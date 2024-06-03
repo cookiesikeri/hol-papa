@@ -9,7 +9,7 @@ class Gallery extends Model
 {
     use HasFactory;
 
-    protected $table = "galleries";
+    protected $table = "papa_galleries";
 
     protected $fillable = ['title', 'image'];
 }

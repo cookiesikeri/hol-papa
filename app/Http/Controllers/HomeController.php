@@ -36,9 +36,9 @@ class HomeController extends Controller
     public function index()
     {
 
-            $galleries = Gallery::inRandomOrder()->get();
-            // $events = Event::orderBy('id', 'desc')->get();
-            $bios = Bio::orderBy('id', 'desc')->get();
+        $galleries = Gallery::inRandomOrder()->get();
+        // $events = Event::orderBy('id', 'desc')->get();
+        $bios = Bio::orderBy('id', 'desc')->get();
 
                     // Fetch data from the first API endpoint
         $response1 = Http::get('https://householdoflove.org/api/v1/quotes');
@@ -84,7 +84,7 @@ class HomeController extends Controller
     public function Gallery()
     {
 
-        $projects = Gallery::orderBy('created_at', 'desc')->paginate(20);
+        $projects = Gallery::orderBy('id', 'desc')->paginate(20);
 
         return view('gallery', compact('projects'));
     }
