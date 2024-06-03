@@ -97,7 +97,7 @@ Home
          @endforeach
         </div>
       </div>
-      <a class="read-more col-md-12 load-more text-center">View All <i class="fa fa-long-arrow-right"></i></a>
+      <a class="read-more col-md-12 load-more text-center" a href="{{ route('gallery') }}">View All <i class="fa fa-long-arrow-right"></i></a>
     </div>
   </section>
 <!--  latest sermons -->
