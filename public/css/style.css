@@ -4671,7 +4671,8 @@ ul {
 
 /* ================================= */
 
-.preloader {
+
+/* .preloader {
     background: #000;
     bottom: 0;
     top: 0;
@@ -4687,7 +4688,7 @@ ul {
     -webkit-animation: fade 5s;
     -moz-animation: fade 5s;
     -o-animation: fade 5s;
-}
+} */
 
 .status,
 .status-message {
