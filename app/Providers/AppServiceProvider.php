@@ -35,14 +35,14 @@ class AppServiceProvider extends ServiceProvider
 
         View::composer('*', function ($view) {
 
-            $view->with('site', \App\Models\SiteSetting::first());
-            $view->with('general', \App\Models\GeneralDetail::first());
+            $view->with('site', \App\Models\PapaSiteSetting::first());
+            $view->with('general', \App\Models\PapaGeneralDetail::first());
             // $view->with('states', \App\Models\State::orderBy('name')->get());
-            $view->with('unreadm', \App\Models\ContactMessage::where('is_treated', 0)->where('status', 0)->orderBy('id', 'desc')->get());
-            $view->with('unreadcount', \App\Models\ContactMessage::where('is_treated', 0)->where('status', 0)->count());
-            $view->with('readmsgcount', \App\Models\ContactMessage::where('is_treated', 1)->where('status', 1)->count());
+            $view->with('unreadm', \App\Models\PapaContactMessage::where('is_treated', 0)->where('status', 0)->orderBy('id', 'desc')->get());
+            $view->with('unreadcount', \App\Models\PapaContactMessage::where('is_treated', 0)->where('status', 0)->count());
+            $view->with('readmsgcount', \App\Models\PapaContactMessage::where('is_treated', 1)->where('status', 1)->count());
             $view->with('countries', \App\Models\Country::orderBy('title')->get());
-            $view->with('sliders', \App\Models\Slider::orderBy('position')->get());
+            $view->with('sliders', \App\Models\PapaSlider::orderBy('position')->get());
 
 
 

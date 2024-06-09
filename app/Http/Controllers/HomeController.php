@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\ContactMessage;
+use App\Models\PapaContactMessage;
 use App\Models\PrayerRequest;
 use App\Models\FAQ;
 use Carbon\Carbon;
 use App\Models\Event;
-use App\Models\Gallery;
+use App\Models\PapaGallery;
 use App\Models\Quote;
 use App\Models\Sermon;
 use App\Models\Bio;
@@ -36,7 +36,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $galleries = Gallery::inRandomOrder()->get();
+        $galleries = PapaGallery::inRandomOrder()->get();
         // $events = Event::orderBy('id', 'desc')->get();
         $bios = Bio::orderBy('id', 'desc')->get();
 
@@ -84,7 +84,7 @@ class HomeController extends Controller
     public function Gallery()
     {
 
-        $projects = Gallery::orderBy('id', 'desc')->paginate(20);
+        $projects = PapaGallery::orderBy('id', 'desc')->paginate(20);
 
         return view('gallery', compact('projects'));
     }
@@ -122,7 +122,7 @@ class HomeController extends Controller
 
 
 
-        $message = ContactMessage::create($data);
+        $message = PapaContactMessage::create($data);
         Session::flash('success', 'Your message has been received and will be duly treated. We will contact you as soon as possible if need be.');
         // Mail::to('support@aspenafrica.org')->send(new \App\Mail\ContactMessage($message));
         return redirect()->back();

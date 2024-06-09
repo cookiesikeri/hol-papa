@@ -25,7 +25,7 @@ Home
                     <li><a href="{{$site->twitter}}" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="{{$site->facebook}}" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="{{$site->youtube}}" target="_blank" class="youtube"><i class="fa fa-youtube-play"></i></a></li>
-                    <li><a href="{{$site->site_email}}" target="_blank" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="{{$site->instagram}}" target="_blank" class="google-plus"><i class="fa fa-instagram"></i></a></li>
                   </ul>
                 </div>
                 <p class="pastor-desc">{!! $general->about_content !!}.</p>
@@ -37,8 +37,8 @@ Home
                     <div class="col-xs-9"><p class="contact-no"><a href="tel:{{$site->hotline}}">{{$site->hotline}}</a><br><a href="tel:{{$site->hotline2}}">{{$site->hotline2}}</a></p></div>
                     <div class="col-xs-3"><p>Email: <i class="fa fa-envelope-open"></i></p></div>
                     <div class="col-xs-9">
-                      <p class="mail-to"><a href="{{$site->site_email}}" target="_top">{{$site->site_email}}</a><br>
-                      <a href="{{$site->site_email}}" target="_top">{{$site->site_email}}</a></p>
+                      <p class="mail-to"><a href="mailto:{{$site->site_email}}" target="_top">{{$site->site_email}}</a><br>
+                      <a href="mailto:{{$site->site_address2}}" target="_top">{{$site->site_address2}}</a></p>
                     </div>
                   </div>
                 </div>

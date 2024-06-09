@@ -13,7 +13,7 @@
           </div>
           <div class="event-content">
             <a href="{{ $state['slug'] ?? '#' }}"><h4 class="event-heading">{{ucfirst($state['name'] ?? 'No name')}}</h4></a>
-            <p class="sermons-date">{{ date('M j, Y', strtotime($state['date'])) }} | {{ date('h:ia', strtotime($state['time'])) }}</p>
+            {{-- <p class="sermons-date">{{ date('M j, Y', strtotime($state['date'])) }} | {{ date('h:ia', strtotime($state['time'])) }}</p> --}}
 
             <a class="read-more" href="{{ $state['slug'] ?? '#' }}">More Details<i class="fa fa-long-arrow-right"></i></a>
           </div>

@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Gallery extends Model
+
+class PapaContactMessage extends Model
 {
     use HasFactory;
 
-    protected $table = "papa_galleries";
+    protected $table = "papa_contact_messages";
 
-    protected $fillable = ['title', 'image'];
+    protected $guarded = [];
 }
