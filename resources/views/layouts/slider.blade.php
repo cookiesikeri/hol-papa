@@ -5,7 +5,7 @@
       <div class="container">
         <div class="slider-dtl">
           <h1 class="slider-heading">{{$state['header']}}</h1>
-          <h5 class="slider-subheading">{{$state['sub_header']}}</h5>
+          {{-- <h5 class="slider-subheading">{{$state['sub_header']}}</h5> --}}
         </div>
       </div>
     </div>

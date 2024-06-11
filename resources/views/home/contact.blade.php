@@ -3,7 +3,7 @@
       <div class="overlay-bg"></div>
       <div class="form-section">
         <h4 class="form-heading">PEACE AND BLESSINGS BE UNTO YOU IN THE NAME OF JESUS. </h4>
-        <h3 class="form-subheading">For appointments/suggestions/enquiries/or to report a case to Rev Yinka Yusuf (General Overseer of Household of Love Church) kindly reach out to the contacts below;</h3>
+        <h3 class="form-subheading">For appointments/suggestions/enquiries/or to report a case <br> to Rev Yinka Yusuf kindly reach out to the contacts below;</h3>
         <div class="pastor-form-block">
           <div class="pastor-contact">
             <span><i class="fa fa-phone"></i></span>
