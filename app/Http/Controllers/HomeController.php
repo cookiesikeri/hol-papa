@@ -36,17 +36,17 @@ class HomeController extends Controller
     public function index()
     {
 
-        $galleries = PapaGallery::inRandomOrder()->get();
+        $galleries = PapaGallery::inRandomOrder()->take(8)->get();
         // $events = Event::orderBy('id', 'desc')->get();
         $bios = Bio::orderBy('id', 'desc')->get();
 
                     // Fetch data from the first API endpoint
-        $response1 = Http::get('https://householdoflove.org/api/v1/quotes');
+        $response1 = Http::get('https://app.householdoflove.org/api/v1/quotes');
 
         // Fetch data from the second API endpoint
-        $response2 = Http::get('https://householdoflove.org/api/v1/sermons');
+        $response2 = Http::get('https://app.householdoflove.org/api/v1/sermons');
 
-        $response3 = Http::get('https://householdoflove.org/api/v1/events');
+        $response3 = Http::get('https://app.householdoflove.org/api/v1/events');
 
         $data1 = [];
         $data2 = [];
